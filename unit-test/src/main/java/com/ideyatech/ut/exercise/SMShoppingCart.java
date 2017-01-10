@@ -14,6 +14,11 @@ public class SMShoppingCart implements ShoppingCart{
 	private int ctrMedium = 0;
 	private int ctrLarge = 0;
 	
+	private int ctrOrderedSmall = 0;
+	private int ctrOrderedMedium = 0;
+	private int ctrOrderedLarge = 0;
+	private int ctrOrderedAddtnl = 0;
+	
 	private double totalPrice = 0.0;
 
 	
@@ -55,6 +60,23 @@ public class SMShoppingCart implements ShoppingCart{
 		System.out.println("product_id" +"\t\t"+ "name" +"\t\t"+ "price");
 		for( int i = 0; i < orderList.size(); i++){
 			System.out.println(orderList.get(i).getProductID() +"\t\t"+ orderList.get(i).getName() +"\t\t"+ orderList.get(i).getPrice());
+		}
+	}
+	
+	public void countOrdered(){
+		for( int i = 0; i < orderList.size(); i++){
+			if(orderList.get(i).getName().equals("SMALL")){
+				ctrOrderedSmall++;
+			}
+			if(orderList.get(i).getName().equals("MEDIUM")){
+				ctrOrderedMedium++;
+			}
+			if(orderList.get(i).getName().equals("LARGE")){
+				ctrOrderedLarge++;
+			}
+			if(orderList.get(i).getName().equals("1GB")){
+				ctrOrderedAddtnl++;
+			}
 		}
 	}
 	
@@ -101,10 +123,33 @@ public class SMShoppingCart implements ShoppingCart{
 			}
 		}
 	}
+	
+	public int getCtrSmall() {
+		return ctrSmall;
+	}
+	public int getCtrMedium() {
+		return ctrMedium;
+	}
+	public int getCtrLarge() {
+		return ctrLarge;
+	}
+	public int getCtrOrderedSmall() {
+		return ctrOrderedSmall;
+	}
+	public int getCtrOrderedMedium() {
+		return ctrOrderedMedium;
+	}
+	public int getCtrOrderedLarge() {
+		return ctrOrderedLarge;
+	}
+	public int getCtrOrderedAddtnl() {
+		return ctrOrderedAddtnl;
+	}
 
 	public void checkOut() {
 		System.out.println("display");
 		checkPromo();
+		countOrdered();
 		System.out.println("promo");
 		displayOrderedProducts();
 		System.out.print("P "+ totalPrice);

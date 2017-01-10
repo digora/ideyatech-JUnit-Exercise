@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SMShoppingCartTest" project="unit-test" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.011">
+    <testcase name="testCheckout" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.006"/>
+    <testcase name="test1GB" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.0"/>
+    <testcase name="testLarge" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.0"/>
+    <testcase name="testSmall" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.001"/>
+    <testcase name="testMedium" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.001"/>
+    <testcase name="testPromo1" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.001"/>
+    <testcase name="testPromo2" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.001"/>
+    <testcase name="testPromo3" classname="com.ideyatech.ut.exercise.SMShoppingCartTest" time="0.001"/>
+  </testsuite>
+</testrun>

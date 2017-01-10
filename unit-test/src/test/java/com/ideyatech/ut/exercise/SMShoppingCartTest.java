@@ -23,7 +23,6 @@ public class SMShoppingCartTest {
 		SMC.initProductList();
 	}
 	
-	
 	@Test
 	public void testSmall(){
 		SMC.addSmall();
@@ -94,7 +93,28 @@ public class SMShoppingCartTest {
 		assertEquals("1GB", SMC.getOrderList().get(1).getName());
 	}
 		
-	
+	@Test
+	public void testCount(){
+		SMC.addSmall();
+		SMC.addSmall();
+		SMC.addSmall();
+		SMC.addLarge();
+		SMC.addLarge();
+		SMC.addLarge();
+		SMC.addLarge();
+		SMC.addLarge();
+		SMC.addMedium();
+		SMC.addMedium();
+		SMC.checkOut();
+		assertEquals(3, SMC.getCtrSmall());
+		assertEquals(5, SMC.getCtrLarge());
+		assertEquals(2, SMC.getCtrMedium());
+		
+		assertEquals(4, SMC.getCtrOrderedSmall());
+		assertEquals(2, SMC.getCtrOrderedMedium());
+		assertEquals(5, SMC.getCtrOrderedLarge());
+		assertEquals(2, SMC.getCtrOrderedAddtnl());
+	}
 	
 	@Test
 	public void testCheckout(){
